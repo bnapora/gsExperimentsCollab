@@ -1,3 +1,6 @@
 models/
 wandb/
 .ipynb_checkpoints
+WSI/
+.vscode/
+__pycache__
