@@ -192,7 +192,7 @@ class FilePatchToMemoryMixin(ParserMixin):
     def imgcoords(self, o) -> Tuple[int, int]:
         pass
 
-class SlideContainerParser(parsers.FasterRCNN, FilePatchToMemoryMixin, parsers.SizeMixin, parsers.LabelsMixin, parsers.BBoxesMixin):
+class SlideContainerParser(parsers.Parser, FilePatchToMemoryMixin, parsers.SizeMixin, parsers.LabelsMixin, parsers.BBoxesMixin):
     def __init__(self, slides):
         # self.source = source
         self.slides = slides
