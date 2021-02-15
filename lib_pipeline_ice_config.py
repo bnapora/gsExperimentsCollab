@@ -17,7 +17,9 @@ params.update(project= 'sample_project')
 params['model'] = 'tf_efficientdet_d4'
 params['run_datetime'] = datetime.now(pytz.timezone('US/Pacific')).strftime("%m%d%Y-%H:%M")
 
-anno_radius = 25
+anno_radius = 25 
+params['bbox_hw'] = anno_radius
+
 classes = {2:  'mitotic figure'}
 class_map_list = ['unkown','mitotic figure']
 

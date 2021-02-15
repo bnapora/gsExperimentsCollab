@@ -120,14 +120,14 @@ def get_slide_annotations(database,patch_size,query_slides):
         labels, bboxes = [], []
 
         for id, annotation in database.annotations.items():
-            if annotation.labels[0].classId in classes:
+            if annotation.agreedClass in classes:
                 d = 2 * anno_radius / down_factor
                 x_min = (annotation.x1 - anno_radius) / down_factor
                 y_min = (annotation.y1 - anno_radius) / down_factor
 
                 x_max = x_min + d
                 y_max = y_min + d
-                label = annotation.labels[0].classId
+                label = annotation.agreedClass
 
                 bboxes.append([int(x_min), int(y_min), int(x_max), int(y_max)])
                 labels.append(label)
